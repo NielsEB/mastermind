@@ -1,5 +1,5 @@
 <template>
-    <div id="applicationHolder" class="w-full h-full flex-1 overflow-hidden flex flex-col">
+    <div id="applicationHolder" class="w-full flex-1 flex flex-col">
         <slot />
     </div>
 </template>

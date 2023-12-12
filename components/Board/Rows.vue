@@ -4,7 +4,7 @@ const { answer, rows, guesses, done, found } = storeToRefs(boardStore);
 </script>
 
 <template>
-    <div class="bg-white rounded-tr-xl rounded-br-xl rounded-bl-xl py-2">
+    <div class="bg-white rounded-xl md:rounded-none md:rounded-tr-xl md:rounded-br-xl md:rounded-bl-xl py-2">
         <div class="flex p-4 py-2 items-center" v-for="(row, index) in rows">
             <div class="text-gray-400 mr-6 flex justify-center w-4">{{ index + 1 }}</div>
             <div class="w-8 h-8 rounded-full mr-4" :class="boardStore.getColor(row.colors[0]) ?? 'bg-gray-200'"></div>

@@ -10,8 +10,8 @@ useHead({
 <template>
     <Navigation />
         
-    <div class="flex gap-8 w-full p-4">
-        <NuxtLink to="mastermind" class="flex flex-col  p-8 w-1/3 aspect-[16/9] border-4 border-black relative">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full p-4">
+        <NuxtLink to="mastermind" class="flex flex-col p-8 aspect-[16/9] border-4 border-black relative">
             <p class="text-sm italic">
                 Ontrafel zo snel mogelijk de kleurencode.<br>Maar let op, elke seconde en verkeerde gok kosten je punten!
             </p>
@@ -23,7 +23,7 @@ useHead({
             </div>
         </NuxtLink>
 
-        <NuxtLink to="battleship" class="p-8 w-1/3 aspect-[16/9] border-4 border-black flex flex-col relative">
+        <NuxtLink to="battleship" class="p-8 aspect-[16/9] border-4 border-black flex flex-col relative">
             <div class="text-4xl">
                 <span class="font-bold">Zee</span>slag
             </div>
@@ -35,7 +35,7 @@ useHead({
             </div>
         </NuxtLink>
 
-        <NuxtLink to="battleship" class="p-8 w-1/3 aspect-[16/9] border-4 border-black flex flex-col relative">
+        <NuxtLink to="battleship" class="p-8 aspect-[16/9] border-4 border-black flex flex-col relative">
             <div class="text-4xl flex-1 flex items-center justify-center">
                 <div><span class="font-bold">Y</span>ahtzee</div><Icon name="game-icons:rolling-dices" /> 
             </div>
