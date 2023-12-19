@@ -3,7 +3,7 @@
 </script>
 <template>
     <div class="flex flex-1 w-full justify-center p-4 md:p-8 bg-gray-100 flex-col md:flex-row relative">
-        <BoardSideBar />
-        <BoardMain />
+        <YahtzeeDices />
+        <YahtzeeSheet />
     </div>
 </template>

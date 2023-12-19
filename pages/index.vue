@@ -35,9 +35,9 @@ useHead({
             </div>
         </NuxtLink>
 
-        <NuxtLink to="battleship" class="p-8 aspect-[16/9] border-4 border-black flex flex-col relative">
+        <NuxtLink to="yahtzee" class="p-8 aspect-[16/9] border-4 border-black flex flex-col relative">
             <div class="text-4xl flex-1 flex items-center justify-center">
-                <div><span class="font-bold">Y</span>ahtzee</div><Icon name="game-icons:rolling-dices" /> 
+                <div><span class="font-bold">Y</span>ahtzee</div><Icon name="game-icons:rolling-dice-cup" /> 
             </div>
             
             <div class="w-16 h-10 bg-black rounded-full absolute right-8 bottom-8 flex items-center justify-center">

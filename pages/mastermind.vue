@@ -14,5 +14,5 @@ useHead({
 <template>
     <Navigation />
 
-    <Board />
+    <MastermindBoard />
 </template>
