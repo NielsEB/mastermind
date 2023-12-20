@@ -1,3 +1,10 @@
+<script setup>
+useHead({
+    htmlAttrs: {
+        lang: 'nl' // TODO: GET THIS FROM LOCALE
+    }
+})
+</script>
 <template>
     <div id="applicationHolder" class="w-full flex-1 flex flex-col">
         <slot />

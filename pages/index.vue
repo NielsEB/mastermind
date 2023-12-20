@@ -2,7 +2,7 @@
 useHead({
     title: 'Snelle Spelletjes',
     meta: [
-        {name: 'description', content: 'Snelle, korte spelletjes om je brein te trainen en even ontspannen een spel te spelen.'}
+        { name: 'description', content: 'Snelle, korte spelletjes om je brein te trainen en even ontspannen een spel te spelen.' },
     ]
 })
 </script>
@@ -23,12 +23,12 @@ useHead({
             </div>
         </NuxtLink>
 
-        <NuxtLink to="battleship" class="p-8 aspect-[16/9] border-4 border-black flex flex-col relative">
+        <NuxtLink to="minesweeper" class="p-8 aspect-[16/9] border-4 border-black flex flex-col relative">
             <div class="text-4xl">
-                <span class="font-bold">Zee</span>slag
+                <span class="font-bold">Mijnen</span>veger
             </div>
             <p class="mt-4 text-sm italic">
-                Zeeslag!<br>Breng de vijf schepen van je tegenstander tot zinken voordat hij de jouwe naar de haaien stuurt.<br>Zoek, vuur en win dit briljante en bekende Zeeslag spel.
+                Identificeer alle mijnen maar pas op, klik je verkeerd dan is het BOEM!!!
             </p>
             <div class="w-16 h-10 bg-black rounded-full absolute right-8 bottom-8 flex items-center justify-center">
                 <Icon class="text-white text-xl" name="formkit:arrowright" />
