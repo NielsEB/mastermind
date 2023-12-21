@@ -7,7 +7,7 @@ minesweeperStore.setDefaults();
 <template>
     <MinesweeperHolder />
 
-    <!-- <YahtzeeResult /> -->
+    <!-- <MinesweeperResult /> -->
 </template>
 
 <style>

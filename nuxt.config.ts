@@ -25,11 +25,23 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@pinia/nuxt',
     '@nuxtjs/i18n',
+    '@nuxtjs/robots',
     ['@nuxtjs/google-fonts', {
       families: {
         'Montserrat': [300,600],
       }
     }]
+  ],
+
+  googleFonts: {
+    download: true
+  },
+
+  robots: [
+    {
+      UserAgent: 'Googlebot',
+      Disallow: '/user',
+    },
   ],
   
   i18n: {
