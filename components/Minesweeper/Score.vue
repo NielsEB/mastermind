@@ -1,6 +1,6 @@
 <script setup>
 const minesweeperStore = useMinesweeperStore();
-const { mines, time } = storeToRefs(minesweeperStore);
+const { mines, time, markMines } = storeToRefs(minesweeperStore);
 </script>
 
 <template>
@@ -9,9 +9,12 @@ const { mines, time } = storeToRefs(minesweeperStore);
             {{ minesweeperStore.getFormattedMineCount(mines) }}
         </div>
 
-        <div class="w-28 h-8 flex">
-            <div class="bg-gray-100 flex-1 rounded-full">
-
+        <div class="w-28 h-8 px-6 flex">
+            <div @click="markMines = !markMines" :class="{'active': markMines}" class="bg-gray-200 flex-1 rounded-full cursor-pointer flex act:justify-end">
+                <div class="m-1 w-6 h-6 rounded-full bg-white flex items-center justify-center">
+                    <Icon :class="{'active': !markMines}" class="!hidden act:!block" name="carbon:checkmark-filled" />
+                    <Icon :class="{'active': markMines}" class="!hidden act:!block" name="solar:flag-bold" />
+                </div>
             </div>
         </div>
         

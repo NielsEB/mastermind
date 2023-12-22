@@ -9,7 +9,8 @@ export const useMinesweeperStore = defineStore({
     done: false,
     success: false,
     time: 0,
-    mines: 10
+    mines: 10,
+    markMines: false
   }),
 
 
@@ -53,7 +54,6 @@ export const useMinesweeperStore = defineStore({
         });
       });
 
-      console.log(count);
       return count;
     }
   },
@@ -65,6 +65,7 @@ export const useMinesweeperStore = defineStore({
       this.done = false;
       this.success = false;
       this.mines = 10;
+      this.markMines = false;
 
       this.buildGrid();
       for(let i = 0; i < 10; i++) {
@@ -87,6 +88,7 @@ export const useMinesweeperStore = defineStore({
           this.grid[x].push({
             revealed: false,
             isMine: false,
+            flagged: false,
             count: 0
           });
         }
@@ -100,6 +102,8 @@ export const useMinesweeperStore = defineStore({
 
       if(cell && !cell.isMine) {
         cell.isMine = true;
+      } else {
+        this.addRandomMine();
       }
     },
 

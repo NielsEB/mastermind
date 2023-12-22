@@ -18,7 +18,18 @@ export default defineNuxtConfig({
     },
   },
 
-  ssr: false,
+  site: {
+    url: 'https://snellespelletjes.nl',
+  },
+
+  sitemap: {
+    cacheMaxAgeSeconds: 3600
+  },
+
+  // ssr: false,
+  experimental: {
+    inlineSSRStyles: false
+  },
 
   modules: [
     "@nuxtjs/tailwindcss",
@@ -26,6 +37,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
+    'nuxt-simple-sitemap',
     ['@nuxtjs/google-fonts', {
       families: {
         'Montserrat': [300,600],
@@ -37,12 +49,14 @@ export default defineNuxtConfig({
     download: true
   },
 
-  robots: [
-    {
-      UserAgent: 'Googlebot',
-      Disallow: '/user',
-    },
-  ],
+  robots: {
+    rules: [
+      {
+        UserAgent: 'Googlebot',
+        Disallow: '/login',
+      },
+    ]
+  },
   
   i18n: {
     vueI18n: 'locale/i18n.config.ts'
