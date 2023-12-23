@@ -10,7 +10,8 @@ export const useMinesweeperStore = defineStore({
     success: false,
     time: 0,
     mines: 10,
-    markMines: false
+    markMines: false,
+    total: 0
   }),
 
 
@@ -66,6 +67,8 @@ export const useMinesweeperStore = defineStore({
       this.success = false;
       this.mines = 10;
       this.markMines = false;
+      this.total = 0;
+      this.time = 0;
 
       this.buildGrid();
       for(let i = 0; i < 10; i++) {
@@ -108,32 +111,46 @@ export const useMinesweeperStore = defineStore({
     },
 
     checkCell(x, y) {
-      if(
-        x >= 0 && y >= 0 &&
-        x < 10 && y < 10 &&
-        !this.grid[x][y].revealed
-      ){
+      if(this.markMines){
         var cell = this.grid[x][y];
-        cell.revealed = true;
-        
-        if(cell.isMine){
-          this.done = true;
-          this.revealMines();
+
+        if(cell.flagged){
+          cell.flagged = false;
+          this.mines++;
         } else {
-          const normalCellCount = this.getNumberOfNormalCells();
-          const minesCount = this.getAdjacentMines(x, y);
+          cell.flagged = true;
+          this.mines--;
+        }
+      } else {
+        if(
+          x >= 0 && y >= 0 &&
+          x < 10 && y < 10 &&
+          !this.grid[x][y].revealed
+        ){
+          var cell = this.grid[x][y];
+          cell.revealed = true;
           
-          if(normalCellCount === 0){
+          if(cell.isMine){
             this.done = true;
-          } else if(minesCount === 0) {
-            for(let i = -1;  i <= 1; i++){
-              for(let j = -1; j <= 1; j++){
-                this.checkCell(x + i, y + j);
+            this.revealMines();
+          } else {
+            const normalCellCount = this.getNumberOfNormalCells();
+            const minesCount = this.getAdjacentMines(x, y);
+            
+            if(normalCellCount === 0){
+              this.done = true;
+              this.success = true;
+              this.total = 1000 - this.time;
+            } else if(minesCount === 0) {
+              for(let i = -1;  i <= 1; i++){
+                for(let j = -1; j <= 1; j++){
+                  this.checkCell(x + i, y + j);
+                }
               }
             }
-          }
 
-          cell.count = minesCount;
+            cell.count = minesCount;
+          }
         }
       }
     },

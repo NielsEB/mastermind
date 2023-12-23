@@ -23,7 +23,8 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    cacheMaxAgeSeconds: 3600
+    cacheMaxAgeSeconds: 3600,
+    sitemaps: true,
   },
 
   // ssr: false,

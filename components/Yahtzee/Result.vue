@@ -4,7 +4,7 @@ const { done, total } = storeToRefs(yahtzeeStore);
 </script>
 
 <template>
-    <div v-if="done" class="fixed w-full h-full flex items-center justify-center bg-gray-400/50 backdrop-blur-sm">
+    <div v-if="done" class="fixed w-full h-full flex items-center justify-center bg-gray-400/50 backdrop-blur-sm p-4">
         <div class="md:min-w-[400px] md:min-h-[200px] bg-white rounded-xl p-12 flex flex-col">
             <h1 class="font-bold text-2xl mb-12">De ronde is afgelopen!</h1>
             <div class="mb-4 font-bold flex items-center">

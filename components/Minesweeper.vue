@@ -7,7 +7,7 @@ minesweeperStore.setDefaults();
 <template>
     <MinesweeperHolder />
 
-    <!-- <MinesweeperResult /> -->
+    <MinesweeperResult />
 </template>
 
 <style>

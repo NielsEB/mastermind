@@ -6,7 +6,7 @@ useHead({
 })
 </script>
 <template>
-    <div id="applicationHolder" class="w-full flex-1 flex flex-col">
+    <div id="applicationHolder" class="min-h-screen w-full flex-1 flex flex-col">
         <slot />
     </div>
 </template>

@@ -1,5 +1,7 @@
 {
     "welcome_intro": "Welkom bij Snelle Spelletjes,\n\nKies hieronder een spelletje om je brein te trainen en even te ontspannen.",
     "quick_games": "Snelle Spelletjes",
-    "mastermind": "Mastermind"
+    "mastermind": "Mastermind",
+    "yahtzee": "Yahtzee",
+    "minesweeper": "Mijnenveger"
 }
